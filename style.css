@@ -1,76 +1,87 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    line-height: 1.6;
+    margin:0;
+    background:#f4f4f4;
+    line-height:1.6;
 }
 
-header {
-    background: #0047ab;
-    color: white;
-    text-align: center;
-    padding: 20px;
+header{
+    background:#0047ab;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
 }
 
-nav {
-    margin-top: 10px;
+header h1{
+    color:white;
+    margin-bottom:10px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
+nav{
+    margin-top:20px;
 }
 
-main {
-    padding: 20px;
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-size:20px;
 }
 
-section {
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+main{
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
 }
 
-footer {
-    text-align: center;
-    background: #0047ab;
-    color: white;
-    padding: 10px;
-}
-.skip-link{
-position:absolute;
-left:-999px;
+section{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:10px;
 }
 
-.skip-link:focus{
-left:10px;
-top:10px;
-background:white;
-padding:10px;
-}
-
-h1,h2,h3{
-color:#0047ab;
+h2,h3{
+    color:#0047ab;
 }
 
 article{
-padding:10px;
-margin-top:10px;
-border-left:4px solid #0047ab;
+    border-left:4px solid #0047ab;
+    padding-left:15px;
+    margin-bottom:20px;
 }
 
-input,textarea{
-width:100%;
-max-width:500px;
-padding:10px;
+input,
+textarea{
+    width:100%;
+    max-width:500px;
+    padding:10px;
+    margin-top:5px;
 }
 
 button{
-background:#0047ab;
-color:white;
-border:none;
-padding:10px 20px;
-cursor:pointer;
+    background:#0047ab;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+footer{
+    background:#0047ab;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+.skip-link{
+    position:absolute;
+    left:-9999px;
+}
+
+.skip-link:focus{
+    left:10px;
+    top:10px;
+    background:white;
+    padding:10px;
 }
