@@ -1,68 +1,104 @@
-body{
-    font-family: Arial, sans-serif;
+:root{
+    --primary:#0047ab;
+    --background:#f4f4f4;
+    --card:#ffffff;
+    --text:#222222;
+}
+
+.dark-mode{
+    --primary:#4d8dff;
+    --background:#121212;
+    --card:#1e1e1e;
+    --text:#ffffff;
+}
+
+*{
     margin:0;
-    background:#f4f4f4;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:var(--background);
+    color:var(--text);
     line-height:1.6;
 }
 
 header{
-    background:#0047ab;
+    background:var(--primary);
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:30px;
 }
 
 header h1{
     color:white;
     margin-bottom:10px;
-    background:none;
-    display:block;
 }
 
 nav{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
     margin-top:20px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
-    font-size:20px;
+    font-size:18px;
+}
+
+.theme-btn{
+    margin-top:20px;
+    background:white;
+    color:var(--primary);
 }
 
 main{
-    max-width:1000px;
+    max-width:1200px;
     margin:auto;
     padding:20px;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:20px;
 }
 
 section{
-    background:white;
+    background:var(--card);
     padding:25px;
-    margin-bottom:20px;
-    border-radius:10px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 h2,h3{
-    color:#0047ab;
+    color:var(--primary);
+    margin-bottom:15px;
 }
 
 article{
-    border-left:4px solid #0047ab;
+    border-left:4px solid var(--primary);
     padding-left:15px;
     margin-bottom:20px;
+}
+
+ul{
+    padding-left:25px;
 }
 
 input,
 textarea{
     width:100%;
-    max-width:500px;
     padding:10px;
     margin-top:5px;
+    margin-bottom:15px;
 }
 
 button{
-    background:#0047ab;
+    background:var(--primary);
     color:white;
     border:none;
     padding:10px 20px;
@@ -70,7 +106,7 @@ button{
 }
 
 footer{
-    background:#0047ab;
+    background:var(--primary);
     color:white;
     text-align:center;
     padding:15px;
@@ -87,7 +123,25 @@ footer{
     background:white;
     padding:10px;
 }
+
+@media (max-width:768px){
+
 header h1{
-    color:white !important;
-    background:none !important;
+    font-size:32px;
+}
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+main{
+    grid-template-columns:1fr;
+    padding:10px;
+}
+
+section{
+    padding:15px;
+}
+
 }
